@@ -27,7 +27,6 @@ Only one valid answer exists.
 """
 
 
-
 def two_sum(nums, target):
     if 2 > len(nums) or len(nums) > 1e4:
         return "Array length must satisfy the condition: 2 <= length <= 1e4."
