@@ -26,14 +26,19 @@ Constraints:
 s consist of only digits and English letters (lower-case and/or upper-case),
 """
 
-
-# This function works even for unsorted arrays.
+import string
 def palindrome(text):
+
     # constraints:
-    
+    if len(text) == 0 or len(text) > 1000:
+        return "Length must be 1 <= s.length <= 1000"
+    for char in string.punctuation:
+        if char in text:
+            return "Text consists of only digits and English letters (lower-case and/or upper-case)."
+
     # return for one or two letters
     s = list(text)
-    if len(s) <= 1:
+    if len(s) == 1:
         return text
     elif len(s) == 2:
         return text[0]
