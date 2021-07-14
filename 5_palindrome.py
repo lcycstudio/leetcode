@@ -57,7 +57,18 @@ def palindrome(text):
         li = list(item)
         if li[0] == li[-1]:
             d.append(item)
-    
+    dd = []
+    for item in d:
+        li = list(item)
+        ok = True
+        ha = int(len(li)/2)
+        for i in range(ha):
+            if li[i] != li[len(li)-1-i]:
+                ok = False
+                break
+        if ok is True:
+            dd.append(item)
+    d = dd
     # return all if all with the same length
     ok = len(d[0])
     for j in range(1, len(d)):
@@ -84,7 +95,8 @@ def palindrome(text):
 if __name__ == "__main__":
     text = "babad"
     # text = "cbbd"
-    # text = "a"
+    # text = "bb"
     # text = "ac"
-    text = "ciciv"
+    text = "civic"
+    text = "keayaejkk"
     print(palindrome(text))
