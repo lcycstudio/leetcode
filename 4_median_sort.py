@@ -114,15 +114,17 @@ def median_sort(nums1, nums2):
     
     # last part
     appd4 = appd3
-    for num in appd3:
-        for k in range(len(a)):
-            if num <= a[k]:
-                a = a[0:k] + [num] + a[k:]
-                appd4 = appd4 - [num]
-                break
+    if len(appd3) > 0:
+        for num in appd3:
+            for k in range(len(a)):
+                if num <= a[k]:
+                    a = a[0:k] + [num] + a[k:]
+                    appd4 = appd4 - [num]
+                    break
     if len(appd4) > 0:
         a = a + appd4
     
+    # find medium 
     half = int(len(a)/2)
     if len(a) % 2 == 0:
         result = (a[half-1] + a[half])/2
@@ -135,6 +137,6 @@ def median_sort(nums1, nums2):
 if __name__ == "__main__":
     # nums1 = [3,2,4,1,5,2,6,4]
     # nums2 = [2,3,5,7,9]
-    nums1 = [1,3]
-    nums2 = [2]
+    nums1 = [1,3,4]
+    nums2 = [2,3]
     print(median_sort(nums1, nums2))
