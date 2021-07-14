@@ -13,5 +13,8 @@ Source: https://leetcode.com/problems/longest-substring-without-repeating-charac
 * [4_median_sort.py](https://github.com/Lcyc29/leetcode/blob/master/4_median_sort.py) (2021/07/14)<br/>
 Source: https://leetcode.com/problems/median-of-two-sorted-arrays/
 
+* [5_palindrome.py](https://github.com/Lcyc29/leetcode/blob/master/5_palindrome.py) (2021/07/14)<br/>
+Source: https://leetcode.com/problems/longest-palindromic-substring/
+
 * [6_zigzag.py](https://github.com/Lcyc29/leetcode/blob/master/6_zigzag.py) (2021/07/12)<br/>
 Source: https://leetcode.com/problems/zigzag-conversion
