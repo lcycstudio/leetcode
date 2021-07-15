@@ -18,3 +18,6 @@ Source: https://leetcode.com/problems/longest-palindromic-substring/
 
 * [6_zigzag.py](https://github.com/Lcyc29/leetcode/blob/master/6_zigzag.py) (2021/07/12)<br/>
 Source: https://leetcode.com/problems/zigzag-conversion
+
+* [7_reverse.py](https://github.com/Lcyc29/leetcode/blob/master/7_reverse.py) (2021/07/15)<br/>
+Source: https://leetcode.com/problems/reverse-integer/
