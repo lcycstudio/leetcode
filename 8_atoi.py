@@ -124,30 +124,39 @@ def atoi(s):
     
     alph_low = list(string. ascii_lowercase) + [' ']
     alph_upp = list(string. ascii_uppercase) + [' ']
-    get_num = []
+    get_number = []
+    get_letter = []
     for j in range(len(s_list)):
         item = s_list[j]
+        if (item in alph_low or item in alph_upp == 0) and len(get_number) == 0:
+            return 0
         if item in num_list:
-            if item == "0" and len(get_num) == 0:
+            if item == "0" and len(get_number) == 0:
+                pass
+            if len(get_letter) > 0:
                 pass
             else:
-                get_num.append(item)
-        if (item in alph_low or item in alph_upp) and len(get_num) > 0:
-            return "Are you sure this is a number?"
-
+                get_number.append(item)
+        if (item in alph_low or item in alph_upp) and len(get_number) > 0:
+            get_letter.append(item)
+    # print(get_letter)
     str_to_num = {"0": 0,"1": 1,"2": 2,"3": 3,"4": 4,"5": 5,"6": 6,"7": 7,"8": 8,"9": 9}
 
     result = 0
-    for k in range(len(get_num)):
-        item = get_num[k]
-        e = len(get_num) - 1 - k
+    for k in range(len(get_number)):
+        item = get_number[k]
+        e = len(get_number) - 1 - k
         result += str_to_num[item] * 10**e
     
     if "-" in s_list:
         result = -result
+    if result < -2**31:
+        return -2**31
+    elif result > 2**31:
+        return 2**31
     return result
 
 
 if __name__ == "__main__":
-    s = "one -0000300030020010.000000"
+    s = "-91283472332"
     print(atoi(s))
