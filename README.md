@@ -21,3 +21,6 @@ Source: https://leetcode.com/problems/zigzag-conversion
 
 * [7_reverse.py](https://github.com/Lcyc29/leetcode/blob/master/7_reverse.py) (2021/07/15)<br/>
 Source: https://leetcode.com/problems/reverse-integer/
+
+* [8_atoi.py](https://github.com/Lcyc29/leetcode/blob/master/8_atoi.py) (2021/07/17)<br/>
+Source: https://leetcode.com/problems/string-to-integer-atoi/
