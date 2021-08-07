@@ -52,7 +52,7 @@ Constraints:
 """
 
 
-def roman(num):
+def int_roman(num):
     # constraints:
     if num < 1 or num > 3999:
         return "Number must be 1 <= num <= 3999."
@@ -100,5 +100,5 @@ if __name__ == "__main__":
     num = 49
     num = 54
     num = 1994
-    print(roman(num))
+    print(int_roman(num))
 
