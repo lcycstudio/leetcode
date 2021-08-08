@@ -40,3 +40,5 @@ Source: https://leetcode.com/problems/integer-to-roman/
 * [0013_roman_int.py](https://github.com/Lcyc29/leetcode/blob/master/0013_roman_int.py) (2021/08/07)<br/>
 Source: https://leetcode.com/problems/roman-to-integer/
 
+* [0014_long_pre.py](https://github.com/Lcyc29/leetcode/blob/master/0014_long_pre.py) (2021/08/07)<br/>
+Source: https://leetcode.com/problems/longest-common-prefix/
