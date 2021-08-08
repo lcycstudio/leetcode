@@ -49,7 +49,7 @@ def matching(s, p):
     
     if len(p) < 1 or len(p) > 20:
         return "p must be 1 <= p.length <= 20."
-    alph_low = list(string. ascii_lowercase)
+    alph_low = list(string.ascii_lowercase)
     alph_low_plus = alph_low + ['.'] + ['*']
     ls = list(s)
     lp = list(p)
