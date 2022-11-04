@@ -24,34 +24,55 @@ Constraints:
 -109 <= target <= 109
 Only one valid answer exists.
 """
+import time
+import numpy as np
 
-
-
-def two_sum(nums, target):
-    if 2 > len(nums) or len(nums) > 1e4:
-        return "Array length must satisfy the condition: 2 <= length <= 1e4."
-    for each in nums:
-        if -1e9 > each or each > 1e9:
-            return "Each integer must satisfy the condition: -1e9 <= integer <= 1e4."
-    if -1e9 > target or target > 1e9:
-        return "Target must satisfy the condition: -1e9 <= target <= 1e9."
-    
+def twoSum(nums, target):
+    t = time.time()
     for i in range(len(nums) - 1):
         result = []
         for j in range(1, len(nums)):
             if nums[i] + nums[j] == target:
                 result.append(i)
                 result.append(j)
-                break
-            if len(result) != 0:
-                    break
-        if len(result) != 0:
-                break
+                print('elapsed: ', time.time() - t)
+                return result
+    print('elapsed: ', time.time() - t)
     return result
+
+class Solution:
+    def __init__(self) -> None:
+        self.index = 0
+        self.incmt = 1
+    
+    def twoSumBigO(self, nums, target):
+        nums = np.array(nums)
+        t = time.time()
+        for i in range(len(nums)):
+            if i > len(nums) - 1:
+                return []
+            diff = target - nums[i]
+            remain = nums[i+1:]
+            half = int(len(remain) / 2)
+            try:
+                indx = np.where(remain[:half] == diff)[0][0]
+            except IndexError:
+                pass
+            else:
+                print('elapsed: ', time.time() - t)
+                return [i, i+1+indx]
+            try:
+                indx = np.where(remain[half:] == diff)[0][0]
+            except IndexError:
+                pass
+            else:
+                print('elapsed: ', time.time() - t)
+                return [i, i+1+indx+half]
+        return []
 
 
 if __name__ == "__main__":
-    nums = [-11**9]
-    target = -11**9
-    two_sum(nums, target)
-    print(two_sum(nums, target))
+    nums = [n for n in range(1, 10001, 1)]
+    target = 19999
+    print(Solution().twoSumBigO(nums, target))
+    print(twoSum(nums, target))
